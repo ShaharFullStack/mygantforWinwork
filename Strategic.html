@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>קנבס אסטרטגי | שחר מעוז - Creative Technologist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Assistant", sans-serif;
+        background-color: #0d1117;
+        color: #c9d1d9;
+      }
+      .canvas-card {
+        background-color: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        padding: 24px;
+        transition: all 0.3s ease-in-out;
+      }
+      .canvas-card:hover {
+        border-color: #58a6ff;
+        transform: translateY(-5px);
+      }
+      .chart-container {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        height: 350px;
+        max-height: 400px;
+      }
+      .swot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .swot-item {
+        padding: 16px;
+        border-radius: 6px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      th,
+      td {
+        border: 1px solid #30363d;
+        padding: 0.75rem;
+        text-align: right;
+      }
+      th {
+        background-color: #161b22;
+        font-weight: bold;
+      }
+      ul,
+      ol {
+        padding-right: 1.5rem;
+        margin: 0.5rem 0;
+      }
+      ul ul,
+      ol ol,
+      ul ol,
+      ol ul {
+        margin: 0.25rem 0;
+      }
+    </style>
+  </head>
+  <body class="p-4 md:p-8">
+    <header class="text-center mb-6">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+        קנבס אסטרטגי: מיצוב והזדמנויות צמיחה
+      </h1>
+      <p class="text-xl text-[#8b949e]">
+        עבור: שחר מעוז MasterStack | תעשייה: פיתוח ווב פרימיום וחוויתי בישראל
+      </p>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+      <section class="canvas-card xl:col-span-3 lg:col-span-2">
+        <h2
+          class="text-2xl font-bold text-white mb-4 border-b-2 border-orange-500 pb-2"
+        >
+          ניתוח אסטרטגי: מיצוב והזדמנויות צמיחה
+        </h2>
+
+        <div class="bg-[#010409] p-4 rounded-md mb-6">
+          <p class="mb-2">
+            <strong class="text-white">עבור:</strong>
+            <span class="text-[#8b949e]"
+              ><b class="text-white">שחר מעוז </b
+              ><a
+                class="text-blue-400 underline hover:text-blue-300 hover:no-underline"
+                href="https://master-stack.com"
+                >MasterStack</a
+              > </span
+            ><br />
+            <strong class="text-white">תעשייה:</strong>
+            <span class="text-[#8b949e]">פיתוח ווב פרימיום וחוויתי בישראל</span
+            ><br />
+            <strong class="text-white">תאריך:</strong>
+            <span class="text-[#8b949e]">21.07.2025</span>
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">
+              1. ניתוח מצב השוק הנוכחי
+            </h3>
+            <p class="text-[#c9d1d9] mb-3">
+              שוק "פיתוח האתרים" בישראל הוא שוק רווי ובוגר, אך הניתוח שלנו מתמקד
+              בנישה ספציפית ומתפתחת:
+              <strong>Creative & Experiential Web Development</strong>.
+            </p>
+            <div class="flex flex-col justify-evenly md:flex-row gap-4">
+              <div class="bg-[#0d1117] p-3 rounded-md mb-3">
+                <p class="text-[#8b949e]">
+                  <strong class="text-blue-400">הגדרה:</strong> פיתוח פתרונות
+                  ווב המשלבים טכנולוגיות מתקדמות (3D, WebGL, Audio API, AI/ML)
+                  ליצירת חוויות משתמש אימרסיביות, אינטראקטיביות וזכירות. המטרה
+                  היא לא רק אינפורמטיבית, אלא רגשית וחוויתית.
+                </p>
+              </div>
+              <div class="bg-[#0d1117] p-3 rounded-md">
+                <p class="text-[#8b949e]">
+                  <strong class="text-blue-400">גודל הנישה:</strong> קטן אך צומח
+                  במהירות. מוערך בכמה עשרות מיליוני שקלים בשנה, עם פוטנציאל
+                  צמיחה דו-ספרתי.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-evenly md:flex-row gap-4">
+            <div>
+              <h4 class="text-lg font-semibold text-white">נהגים מרכזיים:</h4>
+
+              <ul class="list-disc list-inside text-[#8b949e]">
+                <li>
+                  <strong class="text-white">עייפות מתבניות:</strong> מותגים
+                  מחפשים להתבדל מעבר לאתרי וורדפרס/וויקס סטנדרטיים.
+                </li>
+                <li>
+                  <strong class="text-white"
+                    >כלכלת החוויה (Experience Economy):</strong
+                  >
+                  הדגש עובר ממכירת מוצר/שירות למכירת חוויה.
+                </li>
+                <li>
+                  <strong class="text-white">הדמיית מוצרים מורכבים:</strong>
+                  סטארט-אפים בתחום ה-Deep Tech צריכים להציג טכנולוגיה מורכבת
+                  למשקיעים ולקוחות בצורה מוחשית.
+                </li>
+                <li>
+                  <strong class="text-white">עליית ה-Web3/Metaverse:</strong> גם
+                  אם בקצב איטי, המגמה מכשירה את הקרקע לחשיבה על מרחבים
+                  תלת-ממדיים בדפדפן.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-lg font-semibold text-white">
+                קהלי יעד עיקריים לנישה:
+              </h4>
+              <ul class="list-disc list-inside text-[#8b949e]">
+                <li>
+                  <strong class="text-white"
+                    >סטארט-אפים (B2B/Deep Tech):</strong
+                  >
+                  להדגמת מוצר, גיוס הון, שיווק ראשוני.
+                </li>
+                <li>
+                  <strong class="text-white">סוכנויות מיתוג וקריאייטיב:</strong>
+                  כ"נשק סודי" טכנולוגי עבור לקוחות הפרימיום שלהן.
+                </li>
+                <li>
+                  <strong class="text-white"
+                    >מותגי צריכה (Consumer Brands):</strong
+                  >
+                  להשקות מוצר, קמפיינים ייחודיים, הגברת מעורבות.
+                </li>
+                <li>
+                  <strong class="text-white">תעשיות התרבות והאמנות:</strong>
+                  מוזיאונים, אמנים, פסטיבלים.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">
+              2. מגמות מפתח, איומים וחדשנות
+            </h3>
+            <div class="overflow-x-auto">
+              <table class="min-w-full">
+                <thead>
+                  <tr class="bg-[#0d1117]">
+                    <th class="text-blue-400">קטגוריה</th>
+                    <th class="text-blue-400">תיאור</th>
+                    <th class="text-blue-400">השפעה על שחר</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong class="text-white">מגמות מפתח</strong></td>
+                    <td>
+                      1.
+                      <strong class="text-white">Generative AI:</strong> שילוב
+                      מודלי שפה ותמונה בחוויות ווב.
+                    </td>
+                    <td>
+                      <strong class="text-green-400">הזדמנות:</strong> ניתן לשלב
+                      API של AI ליצירת חוויות דינמיות ופרסונליות. דורש התמחות
+                      נוספת.
+                    </td>
+                  </tr>
+                  <tr class="bg-[#0d1117] bg-opacity-50">
+                    <td></td>
+                    <td>
+                      2.
+                      <strong class="text-white">Spatial Computing:</strong>
+                      נורמליזציה של אינטראקציות תלת-ממדיות (Apple Vision Pro).
+                    </td>
+                    <td>
+                      <strong class="text-green-400">הזדמנות:</strong> מחזק את
+                      הרלוונטיות של כישורי ה-3D שלך. המומחיות שלך הופכת קריטית
+                      יותר.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      3.
+                      <strong class="text-white"
+                        >No-Code/Low-Code Platforms:</strong
+                      >
+                      כלים כמו Spline ו-Webflow מאפשרים יצירת 3D בסיסי.
+                    </td>
+                    <td>
+                      <strong class="text-yellow-400">איום/הזדמנות:</strong>
+                      מוריד את רף הכניסה לאינטראקטיביות בסיסית, אך מדגיש את הערך
+                      של פתרונות מורכבים ומותאמים אישית (Code-First) שאתה מציע.
+                    </td>
+                  </tr>
+                  <tr class="bg-[#0d1117] bg-opacity-50">
+                    <td><strong class="text-white">איומים מתפתחים</strong></td>
+                    <td>
+                      1.
+                      <strong class="text-white"
+                        >קומודיטיזציה של העיצוב:</strong
+                      >
+                      כלי AI לעיצוב (Midjourney) עלולים להוזיל את ערך העיצוב
+                      ה"יפה".
+                    </td>
+                    <td>
+                      <strong class="text-green-400">סיכון נמוך:</strong> הערך
+                      שלך אינו ב"יפה" אלא ב"אינטראקטיבי". ההתמקדות בפונקציונליות
+                      ובהיגיון המורכב היא המגן שלך.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      2.
+                      <strong class="text-white">רגישות תקציבית:</strong> תקציבי
+                      שיווק וחדשנות הם הראשונים להיחתך בהאטה כלכלית.
+                    </td>
+                    <td>
+                      <strong class="text-yellow-400">סיכון בינוני:</strong> יש
+                      למקד את המסר ב-ROI עסקי (הגדלת המרות, שיפור תפיסת מותג)
+                      ולא רק ב"חדשנות".
+                    </td>
+                  </tr>
+                  <tr class="bg-[#0d1117] bg-opacity-50">
+                    <td><strong class="text-white">חדשנות משבשת</strong></td>
+                    <td>
+                      <strong class="text-white">WebAssembly (WASM):</strong>
+                      מאפשר הרצת קוד כמעט-נייטיב בדפדפן, פותח דלתות לאפליקציות
+                      מורכבות יותר.
+                    </td>
+                    <td>
+                      <strong class="text-green-400">הזדמנות אדירה:</strong>
+                      מאפשר לך לבנות חוויות עשירות ומהירות יותר, ומחזק את חסם
+                      הכניסה הטכנולוגי למתחרים.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">
+              3. מיפוי וניתוח מתחרים
+            </h3>
+            <p class="text-[#c9d1d9] mb-3">
+              התחרות אינה ישירה מול "פרילנסרים אחרים". היא מורכבת מארכיטיפים
+              שונים עם מודלים עסקיים שונים.
+            </p>
+            <div class="overflow-x-auto">
+              <table class="min-w-full">
+                <thead>
+                  <tr class="bg-[#0d1117]">
+                    <th class="text-blue-400">ארכיטיפ מתחרה</th>
+                    <th class="text-blue-400">מודל עסקי</th>
+                    <th class="text-blue-400">חוזקות</th>
+                    <th class="text-blue-400">חולשות</th>
+                    <th class="text-blue-400">תמחור</th>
+                    <th class="text-blue-400">מיצוב מותג</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong class="text-white">1. פרילנסר Full-Stack</strong>
+                    </td>
+                    <td>שעתי / פרויקטלי</td>
+                    <td>גמישות, מחיר נגיש, יכולת ניהול פרויקט מקצה לקצה.</td>
+                    <td>חוסר התמחות עומק בקריאייטיב-טק, עומס יתר.</td>
+                    <td>₪250-₪450 לשעה</td>
+                    <td>"One-Stop-Shop", פתרון יעיל ומהיר.</td>
+                  </tr>
+                  <tr class="bg-[#0d1117] bg-opacity-50">
+                    <td>
+                      <strong class="text-white">2. סוכנות דיגיטל/מיתוג</strong>
+                    </td>
+                    <td>ריטיינר / פרויקטלי</td>
+                    <td>
+                      צוות רב-תחומי (אסטרטגיה, UX, קופי), קשרי לקוחות קיימים.
+                    </td>
+                    <td>
+                      תהליכים איטיים, עלות גבוהה, לרוב תלות בקבלני משנה כמוך.
+                    </td>
+                    <td>₪20,000-₪100,000+ לפרויקט</td>
+                    <td>"שותף אסטרטגי", פתרון הוליסטי.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong class="text-white"
+                        >3. סטודיו בוטיק ל-Creative Tech (נדיר בישראל)</strong
+                      >
+                    </td>
+                    <td>פרויקטלי</td>
+                    <td>התמחות בנישה, תיק עבודות מרשים, מוניטין בינלאומי.</td>
+                    <td>יקרים מאוד, זמינות נמוכה, פחות גמישים.</td>
+                    <td>₪150,000+ לפרויקט</td>
+                    <td>"הטובים בעולם", אמנות וטכנולוגיה.</td>
+                  </tr>
+                  <tr class="bg-[#0d1117] bg-opacity-50">
+                    <td>
+                      <strong class="text-white"
+                        >4. פלטפורמות No-Code (כמו Webflow, Spline)</strong
+                      >
+                    </td>
+                    <td>מנוי חודשי (SaaS)</td>
+                    <td>מהירות, עלות נמוכה, נגישות ללא ידע בקוד.</td>
+                    <td>מגבלות קסטומיזציה, תלות בפלטפורמה, ביצועים מוגבלים.</td>
+                    <td>₪100-₪500 לחודש</td>
+                    <td>"עשה זאת בעצמך", דמוקרטיזציה של העיצוב.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="mt-3 text-[#c9d1d9] bg-[#0d1117] p-3 rounded-md">
+              <strong class="text-green-400">המיצוב שלך:</strong> אתה פועל
+              ב"אוקיינוס כחול" בין ארכיטיפ 1 ל-3. אתה מציע התמחות עומק של סטודיו
+              בוטיק, בגמישות ובתמחור (יחסית) של פרילנסר מומחה.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">
+              4. ניתוח סיכונים והזדמנויות באמצעות מסגרות אסטרטגיות
+            </h3>
+
+            <div class="bg-[#0d1117] p-4 rounded-md mb-4">
+              <h4 class="text-lg font-semibold text-blue-400 mb-2">
+                א. ניתוח SWOT (סיכום)
+              </h4>
+              <ul class="list-disc list-inside text-[#8b949e]">
+                <li>
+                  <strong class="text-green-400">חוזקות:</strong> שילוב נדיר של
+                  כישורים (קוד-קריאייטיב), רקע יצירתי, תיק עבודות מוכח.
+                </li>
+                <li>
+                  <strong class="text-yellow-400">חולשות:</strong> תלות באדם
+                  אחד, מותג אישי בתחילת דרכו.
+                </li>
+                <li>
+                  <strong class="text-blue-400">הזדמנויות:</strong> ביקוש גובר
+                  לבידול, צמיחת תחומי EdTech/Music-Tech, שותפויות אסטרטגיות.
+                </li>
+                <li>
+                  <strong class="text-red-400">איומים:</strong> תפיסת שוק של
+                  "גימיק יקר", עליית כלי AI.
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-[#0d1117] p-4 rounded-md mb-4">
+              <h4 class="text-lg font-semibold text-blue-400 mb-2">
+                ב. חמשת הכוחות של פורטר (עבור נישת ה-Creative Tech)
+              </h4>
+              <ul class="list-disc list-inside text-[#8b949e]">
+                <li>
+                  <strong class="text-green-400"
+                    >איום כניסת מתחרים חדשים:</strong
+                  >
+                  נמוך. נדרש סט כישורים נדיר וקשה לרכישה.
+                </li>
+                <li>
+                  <strong class="text-yellow-400">כוח מיקוח לקוחות:</strong>
+                  בינוני. לקוחות מתוחכמים, אך יש מעט ספקים כמוך.
+                </li>
+                <li>
+                  <strong class="text-green-400">כוח מיקוח ספקים:</strong> נמוך.
+                  הספקים הם ספריות קוד פתוח (Three.js) או פלטפורמות ענן.
+                </li>
+                <li>
+                  <strong class="text-red-400">איום מוצרים תחליפיים:</strong>
+                  בינוני-גבוה. פלטפורמות No-Code מהוות תחליף "מספיק טוב" לחלק
+                  מהצרכים.
+                </li>
+                <li>
+                  <strong class="text-yellow-400">עצימות התחרות הקיימת:</strong>
+                  נמוכה-בינונית. מעט מתחרים ישירים, התחרות היא על תקציב מול
+                  פתרונות אחרים (כמו קמפיין וידאו).
+                </li>
+              </ul>
+              <p class="mt-2 text-blue-400">
+                <strong>מסקנה:</strong> הנישה אטרקטיבית ומגנה על שחקן מומחה.
+              </p>
+            </div>
+
+            <div class="bg-[#0d1117] p-4 rounded-md">
+              <h4 class="text-lg font-semibold text-blue-400 mb-2">
+                ג. ניתוח שרשרת הערך האסטרטגית (שלך כפרילנסר)
+              </h4>
+              <ul class="list-disc list-inside text-[#8b949e]">
+                <li>
+                  <strong class="text-white">תשתיות:</strong> ניהול עצמי,
+                  חשבונאות, חומרה →
+                  <strong class="text-blue-400">הזדמנות:</strong> אופטימיזציה של
+                  תהליכים.
+                </li>
+                <li>
+                  <strong class="text-white">פיתוח טכנולוגי:</strong> למידה
+                  מתמדת, מחקר ופיתוח של טכניקות חדשות →
+                  <strong class="text-green-400">חוזקה מרכזית</strong>.
+                </li>
+                <li>
+                  <strong class="text-white">שיווק ומכירות:</strong> בניית מותג,
+                  נטוורקינג, כתיבת הצעות מחיר →
+                  <strong class="text-yellow-400"
+                    >חולשה עיקרית, הזדמנות לצמיחה</strong
+                  >.
+                </li>
+                <li>
+                  <strong class="text-white">תפעול (הפרויקט עצמו):</strong>
+                  <ul class="list-disc list-inside mr-6 text-[#8b949e]">
+                    <li>Discovery ואיפיון: הבנת צרכי הלקוח.</li>
+                    <li>עיצוב ו-UX: תכנון החוויה.</li>
+                    <li>פיתוח (קוד): כתיבת הקוד.</li>
+                    <li>Deployment ותחזוקה: העלאה לאוויר ותמיכה.</li>
+                  </ul>
+                  <strong class="text-green-400">הערה:</strong> כל שלב בתפעול
+                  הוא חוזקה.
+                </li>
+                <li>
+                  <strong class="text-white">שירות:</strong> תקשורת עם לקוח,
+                  ניהול ציפיות, תמיכה לאחר השקה →
+                  <strong class="text-blue-400">הזדמנות לבידול</strong>.
+                </li>
+              </ul>
+              <p class="mt-2 text-[#c9d1d9]">
+                <strong class="text-blue-400">תובנה משרשרת הערך:</strong> החוליה
+                החלשה ביותר וההזדמנות הגדולה ביותר לצמיחה היא בשיווק ומכירות.
+                שיפור כאן יביא למכפיל כוח אדיר על החוזקות הקיימות בתפעול.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">
+              5. תקציר אסטרטגי (One-Page Summary)
+            </h3>
+            <p class="text-[#c9d1d9] mb-3">
+              <strong class="text-blue-400">החזון:</strong> להפוך ל-Go-To Expert
+              בישראל לפיתוח חוויות ווב אינטראקטיביות ואימרסיביות, תוך התמקדות
+              בלקוחות טכנולוגיה וקריאייטיב המבינים את הערך של בידול וחדשנות.
+            </p>
+
+            <div class="bg-[#0d1117] p-4 rounded-md mb-4">
+              <h4 class="text-lg font-semibold text-blue-400 mb-2">
+                האבחנה המרכזית (The Core Insight):
+              </h4>
+              <p class="text-[#8b949e]">
+                אתה לא "בונה אתרים". אתה מהנדס חוויות דיגיטליות. הערך שלך אינו
+                נמדד בשורות קוד או בשעות עבודה, אלא ביכולת לתרגם רעיונות מורכבים
+                לחוויות אינטראקטיביות שיוצרות אימפקט עסקי (המרות, מעורבות, תפיסת
+                מותג). התחרות שלך היא לא מול פרילנסרים, אלא על תקציבי חדשנות.
+              </p>
+            </div>
+
+            <div class="bg-[#0d1117] p-4 rounded-md">
+              <h4 class="text-lg font-semibold text-blue-400 mb-2">
+                המלצות אסטרטגיות:
+              </h4>
+              <ol class="list-decimal list-inside text-[#8b949e]">
+                <li class="mb-3">
+                  <strong class="text-green-400"
+                    >מיצוב מחדש (Repositioning):</strong
+                  >
+                  <ul class="list-disc list-inside mr-6 mt-1">
+                    <li>
+                      <strong class="text-white">שנה טייטל:</strong> מ-"Web
+                      Developer" ל-"Creative Technologist" או "Interactive
+                      Experience Developer".
+                    </li>
+                    <li>
+                      <strong class="text-white">עדכן מסרים:</strong> הדגש את
+                      ה"למה" (בידול, מעורבות, סיפור סיפורים) ולא רק את ה"מה"
+                      (Three.js, React).
+                    </li>
+                    <li>
+                      <strong class="text-white"
+                        >הפוך את תיק העבודות ל-Case Studies:</strong
+                      >
+                      לכל פרויקט, הוסף סעיפים: "האתגר העסקי", "הפתרון
+                      הטכנולוגי-יצירתי", "התוצאות".
+                    </li>
+                  </ul>
+                </li>
+                <li class="mb-3">
+                  <strong class="text-green-400"
+                    >מיקוד קהלי יעד (Target Audience Focus):</strong
+                  >
+                  <ul class="list-disc list-inside mr-6 mt-1">
+                    <li>
+                      <strong class="text-white"
+                        >עדיפות 1: סטארט-אפים (Deep Tech/B2B):</strong
+                      >
+                      פנה באופן יזום לחברות שגייסו לאחרונה וצריכות להציג מוצר
+                      מורכב. הצע "Product Demo as a Web Experience".
+                    </li>
+                    <li>
+                      <strong class="text-white"
+                        >עדיפות 2: סוכנויות קריאייטיב ומיתוג:</strong
+                      >
+                      הצג את עצמך כ"שותף טכנולוגי" שיכול להוציא לפועל את
+                      החזיונות הכי פרועים של הלקוחות שלהם. הצע להם עמלה על
+                      הפניות.
+                    </li>
+                  </ul>
+                </li>
+                <li class="mb-3">
+                  <strong class="text-green-400"
+                    >מודל תמחור מבוסס ערך (Value-Based Pricing):</strong
+                  >
+                  <ul class="list-disc list-inside mr-6 mt-1">
+                    <li>הפסק לתמחר לפי שעה. זה הופך אותך לסחורה.</li>
+                    <li>
+                      עבור לחבילות פרויקט:
+                      <ul class="list-disc list-inside mr-6 mt-1">
+                        <li>
+                          <strong class="text-white"
+                            >Discovery (בתשלום):</strong
+                          >
+                          סדנת איפיון של 2-4 שעות להגדרת ה-MVP של החוויה.
+                          (₪2,000-₪4,000).
+                        </li>
+                        <li>
+                          <strong class="text-white">MVP Package:</strong> פיתוח
+                          גרסה ראשונה של החוויה. (₪25,000-₪50,000).
+                        </li>
+                        <li>
+                          <strong class="text-white"
+                            >Full Experience Package:</strong
+                          >
+                          פיתוח מלא כולל אנימציות מורכבות, סאונד וכו'.
+                          (₪50,000+).
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      התמחור משדר מומחיות ומאלץ את הלקוח לחשוב על הערך, לא על
+                      העלות.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong class="text-green-400"
+                    >שיווק כהוכחת יכולת (Marketing as a Demo):</strong
+                  >
+                  <ul class="list-disc list-inside mr-6 mt-1">
+                    <li>
+                      <strong class="text-white">הפוך למוביל דעה:</strong> כתוב
+                      2-3 מאמרים מעמיקים ב-Medium או LinkedIn על "העתיד של
+                      חוויות ווב" או "איך להשתמש ב-3D כדי להגדיל המרות".
+                    </li>
+                    <li>
+                      <strong class="text-white">הרצה במיטאפים:</strong> הצג
+                      Case Study שלך במיטאפים של UX/UI ו-Frontend. הקהל שם (ראשי
+                      צוותים, מנהלי מוצר) הם לקוחות פוטנציאליים או שער ללקוחות.
+                    </li>
+                    <li>
+                      <strong class="text-white"
+                        >צור "צעצועים דיגיטליים":</strong
+                      >
+                      פתח דמואים קטנים ואינטראקטיביים שיראו את היכולות שלך ושתף
+                      אותם ברשתות. זהו תוכן ויראלי פוטנציאלי.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="canvas-card xl:col-span-3 lg:col-span-2">
+        <h2
+          class="text-2xl font-bold text-white mb-4 border-b-2 border-indigo-500 pb-2"
+        >
+          ניתוח אסטרטגי מעמיק: ארכיטקט של חוויות דיגיטליות
+        </h2>
+
+        <div class="space-y-6">
+          <div class="bg-[#010409] p-4 rounded-md mb-4">
+            <h3 class="text-xl font-semibold text-indigo-400 mb-3">
+              מבט מאקרו: החזית הדיגיטלית בישראל
+            </h3>
+            <div class="flex flex-col md:flex-row gap-4">
+              <div class="bg-[#0d1117] p-3 rounded-md flex-1">
+                <h4 class="text-lg font-semibold text-blue-400 mb-2">
+                  שוק הפרסום הדיגיטלי
+                </h4>
+                <p class="text-[#8b949e]">
+                  שוק הפרסום בישראל עבר שינוי מבני יסודי. ההוצאה על פרסום
+                  דיגיטלי, שהגיעה לכ-1.67 מיליארד שקלים (כ-38% מעוגת הפרסום),
+                  עקפה לראשונה את ההוצאה על פרסום בטלוויזיה. מציאות זו יוצרת
+                  <strong class="text-white">סביבה רוויה ביותר</strong>, שבה
+                  מותגים אינם יכולים עוד להתחרות על עצם הנוכחות בלבד; עליהם
+                  להתחרות על תשומת לב.
+                </p>
+              </div>
+              <div class="bg-[#0d1117] p-3 rounded-md flex-1">
+                <h4 class="text-lg font-semibold text-blue-400 mb-2">
+                  עליית כלכלת החוויה
+                </h4>
+                <p class="text-[#8b949e]">
+                  הצרכן הישראלי הופך למתוחכם, בררן וחסר סבלנות. 84% מהצרכנים
+                  משתמשים בכלים דיגיטליים להשוואת מחירים, וטווחי הקשב מתכווצים.
+                  אתרים סטנדרטיים אינם מצוידים להתמודד עם ארכיטיפ הצרכן החדש.
+                  <strong class="text-white"
+                    >חוויה אימרסיבית פועלת כ"מפסקת דפוסים"</strong
+                  >
+                  ומעבירה את המשתמש מצריכת מידע פסיבית להשתתפות פעילה.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#010409] p-4 rounded-md mb-4">
+            <h3 class="text-xl font-semibold text-indigo-400 mb-3">
+              החזית הטכנולוגית: מגמות המעצבות את העתיד
+            </h3>
+            <div class="space-y-4">
+              <div class="bg-[#0d1117] p-3 rounded-md">
+                <h4 class="text-lg font-semibold text-blue-400 mb-2">
+                  שכבת האינטליגנציה: היפר-פרסונליזציה
+                </h4>
+                <p class="text-[#8b949e]">
+                  המגמה המשמעותית ביותר לשנת 2025 היא המעבר מפרסונליזציה פשוטה
+                  להיפר-פרסונליזציה מבוססת בינה מלאכותית. גישה זו כוללת יצירת
+                  חוויות ייחודיות עבור כל משתמש בודד בזמן אמת, המסוגלת להשתלב עם
+                  ממשקי API של בינה מלאכותית. המומחיות הטכנית שלך (React,
+                  JavaScript מתקדם) היא הדחיפה הטכנולוגית המאפשרת ליישם מגמה זו.
+                </p>
+              </div>
+              <div class="bg-[#0d1117] p-3 rounded-md">
+                <h4 class="text-lg font-semibold text-blue-400 mb-2">
+                  מעבר למסך: שחר המחשוב המרחבי
+                </h4>
+                <p class="text-[#8b949e]">
+                  השקתם של מכשירים כמו ה-Apple Vision Pro מייצגת שינוי פרדיגמטי
+                  לעבר "מחשוב מרחבי". המומחיות שלך בטכנולוגיות 3D/WebGL אינה
+                  מיועדת עוד לדפדפן בלבד; היא מהווה את הכישור הבסיסי עבור הדור
+                  הבא של ממשקי המחשוב. אתה יכול למכור ללקוחותיך לא רק אתר
+                  אינטרנט, אלא
+                  <strong class="text-white">"נכס דיגיטלי מוכן-למרחב"</strong>.
+                </p>
+              </div>
+              <div class="bg-[#0d1117] p-3 rounded-md">
+                <h4 class="text-lg font-semibold text-blue-400 mb-2">
+                  מנוע הביצועים: WebAssembly כחפיר טכנולוגי
+                </h4>
+                <p class="text-[#8b949e]">
+                  WebAssembly (WASM) הוא הרבה יותר מהזדמנות: זהו מאפשר בסיסי
+                  ומחסום כניסה אדיר. WASM מאפשר ליישומים לרוץ במהירות
+                  כמעט-נייטיב ישירות בדפדפן, ופותח דלתות ליישומים עתירי ביצועים
+                  שהיו בלתי אפשריים בעבר. זהו
+                  <strong class="text-white"
+                    >החפיר הטכנולוגי המגן מפני קומודיטיזציה</strong
+                  >
+                  - פלטפורמות No-Code/Low-Code אינן יכולות להתחרות ברמת הביצועים
+                  ש-WASM מאפשר.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#010409] p-4 rounded-md mb-4">
+            <h3 class="text-xl font-semibold text-indigo-400 mb-3">
+              ניווט בזירה התחרותית: האוקיינוס הכחול
+            </h3>
+            <div class="bg-[#0d1117] p-3 rounded-md mb-4">
+              <h4 class="text-lg font-semibold text-blue-400 mb-2">
+                בנצ'מרקינג למצוינות
+              </h4>
+              <p class="text-[#8b949e]">
+                הבנצ'מרק האמיתי ל"פרימיום" בישראל נקבע על ידי יחידים וסוכנויות
+                הזוכים להכרה בינלאומית. דוגמאות כמו אור הלוי מספקות הוכחת
+                היתכנות לכך שקיים שוק ברור בישראל לחוויות ווב יוקרתיות, ראויות
+                לפרסים, שנוצרו על ידי מומחה יחיד.
+              </p>
+            </div>
+
+            <div class="bg-[#0d1117] p-3 rounded-md">
+              <h4 class="text-lg font-semibold text-blue-400 mb-2">
+                מודל המומחה-כשירות: סוכנויות כערוץ שיווק
+              </h4>
+              <p class="text-[#8b949e]">
+                סוכנויות הדיגיטל והמיתוג הגדולות בישראל אינן מתחרות; הן ערוץ
+                השיווק היקר ביותר. סוכנויות כמו Guts ו-Richkid מתמקדות באסטרטגיה
+                ברמה גבוהה, אך חוזק הליבה שלהן אינו בדרך כלל ביצוע טכנולוגי
+                עמוק. עליך
+                <strong class="text-white"
+                  >למצב את עצמך כשותף אסטרטגי – "נשק הטק הסודי" שלהן</strong
+                >. זוהי מערכת יחסים סימביוטית, לא תחרותית, המספקת זרם קבוע של
+                עבודה איכותית ומסוננת מראש.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-[#010409] p-4 rounded-md">
+            <h3 class="text-xl font-semibold text-indigo-400 mb-3">
+              תוכנית אב אסטרטגית להובלת שוק
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-[#0d1117] p-3 rounded-md">
+                <h4 class="text-lg font-semibold text-green-400 mb-2">
+                  לקוחות יעד: Deep-Tech ממומנים
+                </h4>
+                <div class="space-y-2">
+                  <p class="text-[#8b949e]">
+                    לחברות Deep-Tech שזה עתה גייסו הון יש בעיה קריטית ומיידית:
+                    כיצד להסביר טכנולוגיה מורכבת ומופשטת לסבב המשקיעים הבא,
+                    לשותפים אסטרטגיים וללקוחות ארגוניים.
+                  </p>
+                  <ul class="list-disc list-inside text-[#8b949e]">
+                    <li>
+                      עקוב אחר הודעות על גיוסי הון של חברות טכנולוגיה ישראליות
+                    </li>
+                    <li>
+                      פנה באופן יזום למייסדים/סמנכ"לי שיווק בחברות שסגרו סבבי
+                      Seed או Series A
+                    </li>
+                    <li>
+                      הצע "הדגמה אינטראקטיבית של הטכנולוגיה" כדי להאיץ את מחזור
+                      המכירות
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="bg-[#0d1117] p-3 rounded-md">
+                <h4 class="text-lg font-semibold text-green-400 mb-2">
+                  מודל תמחור ארבע-שכבתי
+                </h4>
+                <div class="space-y-2">
+                  <p class="text-[#8b949e]">
+                    תמחור שעתי הופך מומחיות לסחורה ומעניש על יעילות. תמחור מבוסס
+                    ערך מתאים את העלות לאימפקט העסקי שנוצר.
+                  </p>
+                  <ul class="list-disc list-inside text-[#8b949e]">
+                    <li>
+                      <strong class="text-white">שכבה 0:</strong> סדנת גילוי
+                      אסטרטגית בתשלום (₪5,000-₪7,500)
+                    </li>
+                    <li>
+                      <strong class="text-white">שכבה 1:</strong> חבילת חוויית
+                      MVP (₪30,000-₪60,000)
+                    </li>
+                    <li>
+                      <strong class="text-white">שכבה 2:</strong> חבילת חוויה
+                      אימרסיבית מלאה (₪60,000-₪150,000+)
+                    </li>
+                    <li>
+                      <strong class="text-white">שכבה 3:</strong> ריטיינר חדשנות
+                      (₪15,000+ לחודש)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="canvas-card xl:col-span-3 lg:col-span-2">
+        <h2
+          class="text-2xl font-bold text-white mb-4 border-b-2 border-yellow-500 pb-2"
+        >
+          מצגת אסטרטגית: מהלכי חדירה לשוק והזדמנויות צמיחה
+        </h2>
+
+        <div class="bg-[#010409] p-4 rounded-md mb-6">
+          <h3 class="text-xl font-semibold text-yellow-400 mb-3">
+            תקציר מנהלים
+          </h3>
+          <div class="space-y-3">
+            <div class="bg-[#0d1117] p-3 rounded-md">
+              <p class="text-[#8b949e]">
+                <strong class="text-white">אבחנה:</strong> שוק פיתוח הווב בישראל
+                נמצא בנקודת פיצול. בעוד שוק הרוב ("האוקיינוס האדום") עובר
+                קומודיטיזציה מהירה ונלחם על מחיר, נוצרה נישה מובחנת ורווחית
+                ("האוקיינוס הכחול") עבור פתרונות "Creative Technology". נישה זו
+                מונעת מהצורך של סטארט-אפים וחברות טכנולוגיה בבידול, הדמיית
+                מוצרים מורכבים, והגברת מעורבות משתמשים.
+              </p>
+            </div>
+            <div class="bg-[#0d1117] p-3 rounded-md">
+              <p class="text-[#8b949e]">
+                <strong class="text-white">הזדמנות אסטרטגית:</strong> סט
+                הכישורים הייחודי שלך, המשלב פיתוח Full-Stack עם התמחות עמוקה
+                בטכנולוגיות אינטראקטיביות (3D, WebGL, Audio API), ממצב אותך
+                בעמדה א-סימטרית לתפוס נתח שוק משמעותי בנישה זו, עם תחרות ישירה
+                מינימלית.
+              </p>
+            </div>
+            <div class="bg-[#0d1117] p-3 rounded-md">
+              <p class="text-[#8b949e]">
+                <strong class="text-white">המלצות:</strong> יש להתמקד בשלושה
+                מהלכי חדירה לשוק (Go-to-Market):
+              </p>
+              <ol class="list-decimal list-inside mt-2 text-[#8b949e]">
+                <li>
+                  מיצוב כשותף טכנולוגי-יצירתי (White-Label) עבור סוכנויות
+                  קריאייטיב.
+                </li>
+                <li>
+                  התמחות ב-"Product Demo as a Web Experience" עבור סטארט-אפים
+                  טכנולוגיים.
+                </li>
+                <li>"מוצריזציה" של שירותים ליצירת נקודות כניסה מהירות לשוק.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- שקף 1 -->
+        <div class="mb-8">
+          <h3
+            class="text-xl font-semibold text-blue-400 mb-3 bg-[#0d1117] p-2 rounded-md inline-block"
+          >
+            שקף 1: ניתוח שוק עמוק
+          </h3>
+
+          <div class="bg-[#0d1117] p-4 rounded-md mb-4">
+            <h4 class="text-lg font-semibold text-white mb-2">
+              נוף השוק: שוק דו-שכבתי
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-[#161b22] p-3 rounded-md">
+                <h5 class="text-md font-semibold text-red-400 mb-2">
+                  שכבה 1: שוק ה-Commodity (כ-75%)
+                </h5>
+                <ul class="list-disc list-inside text-[#8b949e] space-y-2">
+                  <li>
+                    <strong class="text-white">היצע:</strong> אתרי וורדפרס
+                    תבניתיים, חנויות Shopify בסיסיות, דפי נחיתה.
+                  </li>
+                  <li>
+                    <strong class="text-white">לקוחות:</strong> עסקים קטנים
+                    ובינוניים (SMBs) עם רגישות גבוהה למחיר.
+                  </li>
+                  <li>
+                    <strong class="text-white">דינמיקה:</strong> תחרות מחירים
+                    אינטנסיבית, חסמי כניסה נמוכים, שחיקת רווחיות.
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-[#161b22] p-3 rounded-md">
+                <h5 class="text-md font-semibold text-blue-400 mb-2">
+                  שכבה 2: שוק ה-Premium Niche (כ-25% וצומח)
+                </h5>
+                <ul class="list-disc list-inside text-[#8b949e] space-y-2">
+                  <li>
+                    <strong class="text-white">היצע:</strong> חוויות ווב
+                    אינטראקטיביות, פיתוח Headless, פתרונות Webflow מתקדמים,
+                    הדמיות 3D/WebGL.
+                  </li>
+                  <li>
+                    <strong class="text-white">לקוחות:</strong> סטארט-אפים
+                    (בעיקר B2B/Deep Tech), חברות טכנולוגיה, סוכנויות קריאייטיב.
+                  </li>
+                  <li>
+                    <strong class="text-white">דינמיקה:</strong> תחרות מבוססת
+                    מומחיות, רווחיות גבוהה, חסמי כניסה טכנולוגיים גבוהים.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#0d1117] p-4 rounded-md">
+            <h4 class="text-lg font-semibold text-green-400 mb-2">
+              גודל שוק הנישה
+            </h4>
+            <p class="text-[#8b949e]">
+              מוערך בכ-50-80 מיליון ש"ח בשנה בישראל, עם צפי לצמיחה של 15-20%
+              שנתי, הניזון מהצורך הגובר בבידול דיגיטלי.
+            </p>
+          </div>
+        </div>
+
+        <!-- שקף 2 -->
+        <div class="mb-8">
+          <h3
+            class="text-xl font-semibold text-blue-400 mb-3 bg-[#0d1117] p-2 rounded-md inline-block"
+          >
+            שקף 2: מגמות ונקודות מפנה מרכזיות (12 חודשים אחרונים)
+          </h3>
+
+          <div class="space-y-4">
+            <div class="bg-[#0d1117] p-4 rounded-md">
+              <h4 class="text-lg font-semibold text-indigo-400 mb-2">
+                אינטגרציית AI גנרטיבי הופכת לסטנדרט
+              </h4>
+              <p class="text-[#8b949e] mb-2">
+                <strong class="text-white">תיאור:</strong> שימוש נרחב בכלים כמו
+                GitHub Copilot להאצת פיתוח, ו-Midjourney/Dall-E ליצירת נכסים
+                ויזואליים. ה-AI עובר מתפקיד של "עוזר" לתפקיד של "שותף" בתהליך.
+              </p>
+              <p class="text-[#8b949e]">
+                <strong class="text-white">נקודת מפנה:</strong> המיקוד עובר
+                מכתיבת קוד שגרתי ל-<strong class="text-green-400"
+                  >Orchestration</strong
+                >
+                של מערכות מורכבות ופתרון בעיות לוגיות ברמה גבוהה.
+              </p>
+            </div>
+
+            <div class="bg-[#0d1117] p-4 rounded-md">
+              <h4 class="text-lg font-semibold text-indigo-400 mb-2">
+                התבגרות טכנולוגיות ה-Real-Time Web
+              </h4>
+              <p class="text-[#8b949e] mb-2">
+                <strong class="text-white">תיאור:</strong> WebAssembly (WASM)
+                ו-WebGL הפכו מיציבים לסטנדרט דה-פקטו עבור אפליקציות עתירות
+                ביצועים בדפדפן (כמו Figma, משחקים, וסימולציות).
+              </p>
+              <p class="text-[#8b949e]">
+                <strong class="text-white">נקודת מפנה:</strong> הציפייה של
+                משתמשים לחוויות אינטראקטיביות, מהירות וחלקות, דמויות-אפליקציה,
+                אינה עוד "יתרון" אלא דרישת בסיס במוצרי פרימיום.
+              </p>
+            </div>
+
+            <div class="bg-[#0d1117] p-4 rounded-md">
+              <h4 class="text-lg font-semibold text-indigo-400 mb-2">
+                עליית ה-"No-Code" ככלי ל-Prototyping מהיר
+              </h4>
+              <p class="text-[#8b949e] mb-2">
+                <strong class="text-white">תיאור:</strong> פלטפורמות כמו Webflow
+                ו-Spline מאפשרות למעצבים ולצוותי מוצר לבנות אבות-טיפוס
+                אינטראקטיביים ופונקציונליים ללא תלות במפתחים.
+              </p>
+              <p class="text-[#8b949e]">
+                <strong class="text-white">נקודת מפנה:</strong> הערך של מפתחים
+                מוסט מבניית ה-UI הבסיסי לביצוע אינטגרציות מורכבות, פיתוח לוגיקה
+                עסקית, ואופטימיזציה של ביצועים – דברים שפלטפורמות No-Code עדיין
+                מתקשות בהם.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- שקף 3 -->
+        <div class="mb-8">
+          <h3
+            class="text-xl font-semibold text-blue-400 mb-3 bg-[#0d1117] p-2 rounded-md inline-block"
+          >
+            שקף 3: ניתוח מתחרים מובילים (ארכיטיפים)
+          </h3>
+
+          <div class="overflow-x-auto">
+            <table class="min-w-full bg-[#0d1117] rounded-md">
+              <thead>
+                <tr class="border-b border-[#30363d]">
+                  <th class="p-3 text-blue-400 text-right">ארכיטיפ</th>
+                  <th class="p-3 text-blue-400 text-right">SWOT</th>
+                  <th class="p-3 text-blue-400 text-right">תמחור</th>
+                  <th class="p-3 text-blue-400 text-right">מיצוב</th>
+                  <th class="p-3 text-blue-400 text-right">מיקוד לקוחות</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-[#30363d]">
+                  <td class="p-3 text-white">
+                    <strong>1. הפרילנסר הכללי</strong>
+                  </td>
+                  <td class="p-3 text-[#8b949e]">
+                    <strong class="text-green-400">ח:</strong> שירות אישי,
+                    מחיר.<br />
+                    <strong class="text-yellow-400">ח:</strong> מוגבלות
+                    טכנולוגית.<br />
+                    <strong class="text-blue-400">ה:</strong> שוק ה-SMBs
+                    הענק.<br />
+                    <strong class="text-red-400">א:</strong> קומודיטיזציה.
+                  </td>
+                  <td class="p-3 text-[#8b949e]">
+                    נמוך-בינוני<br />(₪5k-10k לפרויקט)
+                  </td>
+                  <td class="p-3 text-[#8b949e]">
+                    "One-Stop-Shop אמין לעסק שלך"
+                  </td>
+                  <td class="p-3 text-[#8b949e]">
+                    עסקים קטנים ובינוניים (SMBs).
+                  </td>
+                </tr>
+                <tr class="border-b border-[#30363d]">
+                  <td class="p-3 text-white">
+                    <strong>2. סטודיו בוטיק לקריאייטיב</strong>
+                  </td>
+                  <td class="p-3 text-[#8b949e]">
+                    <strong class="text-green-400">ח:</strong> עיצוב High-End,
+                    מומחיות Webflow.<br />
+                    <strong class="text-yellow-400">ח:</strong> יקר, תלות בצוות
+                    קטן.<br />
+                    <strong class="text-blue-400">ה:</strong> מותגי פרימיום.<br />
+                    <strong class="text-red-400">א:</strong> תחרות על טאלנטים.
+                  </td>
+                  <td class="p-3 text-[#8b949e]">
+                    גבוה<br />(₪20k-80k+ לפרויקט)
+                  </td>
+                  <td class="p-3 text-[#8b949e]">
+                    "אנחנו יוצרים אתרים יפהפיים שממירים"
+                  </td>
+                  <td class="p-3 text-[#8b949e]">
+                    סטארט-אפים, מותגי D2C, חברות טכנולוגיה.
+                  </td>
+                </tr>
+                <tr class="border-b border-[#30363d]">
+                  <td class="p-3 text-white">
+                    <strong>3. סוכנות דיגיטל מלאה</strong>
+                  </td>
+                  <td class="p-3 text-[#8b949e]">
+                    <strong class="text-green-400">ח:</strong> פתרון 360°, צוות
+                    גדול.<br />
+                    <strong class="text-yellow-400">ח:</strong> יחס אישי נמוך,
+                    תהליכים איטיים.<br />
+                    <strong class="text-blue-400">ה:</strong> לקוחות
+                    Enterprise.<br />
+                    <strong class="text-red-400">א:</strong> עלויות תקורה
+                    גבוהות.
+                  </td>
+                  <td class="p-3 text-[#8b949e]">
+                    גבוה מאוד<br />(ריטיינר חודשי ₪15k+)
+                  </td>
+                  <td class="p-3 text-[#8b949e]">
+                    "השותף שלך לצמיחה דיגיטלית"
+                  </td>
+                  <td class="p-3 text-[#8b949e]">חברות בינוניות וגדולות.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 text-white">
+                    <strong>4. הפלטפורמה הגלובלית (Fiverr/Upwork)</strong>
+                  </td>
+                  <td class="p-3 text-[#8b949e]">
+                    <strong class="text-green-400">ח:</strong> מחיר, מהירות,
+                    היצע.<br />
+                    <strong class="text-yellow-400">ח:</strong> איכות לא אחידה,
+                    קשיי תקשורת.<br />
+                    <strong class="text-blue-400">ה:</strong> שוק
+                    ה-Micro-budget.<br />
+                    <strong class="text-red-400">א:</strong> חוסר אמינות נתפס.
+                  </td>
+                  <td class="p-3 text-[#8b949e]">
+                    נמוך מאוד<br />($500-$2,000 לפרויקט)
+                  </td>
+                  <td class="p-3 text-[#8b949e]">
+                    "מצא פרילנסר לכל משימה, בכל תקציב"
+                  </td>
+                  <td class="p-3 text-[#8b949e]">
+                    סטארט-אפים בשלב Bootstrapping, עסקים קטנים מאוד.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- שקף 4 -->
+        <div class="mb-8">
+          <h3
+            class="text-xl font-semibold text-blue-400 mb-3 bg-[#0d1117] p-2 rounded-md inline-block"
+          >
+            שקף 4: סיכונים חבויים
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-[#0d1117] p-4 rounded-md">
+              <h4 class="text-lg font-semibold text-red-400 mb-2">
+                סיכונים כלכליים
+              </h4>
+              <ul class="list-disc list-inside text-[#8b949e] space-y-2">
+                <li>
+                  <strong class="text-white">רגישות תקציבי חדשנות:</strong>
+                  בהאטה כלכלית, תקציבי "קריאייטיב" ו"חוויה" הם הראשונים להיפגע,
+                  בניגוד לתקציבי "תחזוקה" או "לידים".
+                </li>
+                <li>
+                  <strong class="text-white">תלות בפרויקטים גדולים:</strong>
+                  מודל המבוסס על מספר קטן של פרויקטים גדולים בשנה יוצר תנודתיות
+                  גבוהה בתזרים המזומנים.
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-[#0d1117] p-4 rounded-md">
+              <h4 class="text-lg font-semibold text-red-400 mb-2">
+                סיכונים רגולטוריים
+              </h4>
+              <ul class="list-disc list-inside text-[#8b949e] space-y-2">
+                <li>
+                  <strong class="text-white"
+                    >פרטיות נתונים (Data Privacy):</strong
+                  >
+                  חוויות אינטראקטיביות אוספות לעיתים קרובות יותר נתוני התנהגות.
+                  יש צורך בהבנה מעמיקה של GDPR/CCPA כדי להימנע מחשיפה משפטית, גם
+                  עבור לקוחות ישראליים הפונים לשוק הבינלאומי.
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-[#0d1117] p-4 rounded-md">
+              <h4 class="text-lg font-semibold text-red-400 mb-2">
+                סיכונים טכנולוגיים
+              </h4>
+              <ul class="list-disc list-inside text-[#8b949e] space-y-2">
+                <li>
+                  <strong class="text-white">"מלכודת הפלטפורמה":</strong> התמחות
+                  עמוקה מדי בטכנולוגיה ספציפית (למשל, ספריית 3D מסוימת) חושפת
+                  אותך לסיכון אם טכנולוגיה מתחרה הופכת לסטנדרט.
+                </li>
+                <li>
+                  <strong class="text-white">איום ה-"Good Enough":</strong> כלי
+                  AI ו-No-Code משתפרים בקצב אקספוננציאלי. הסיכון אינו שהם יחליפו
+                  אותך, אלא שהם יספקו פתרון "מספיק טוב" עבור 80% מהשוק, ויצמצמו
+                  את נישת הפרימיום שלך.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- שקף 5 -->
+        <div>
+          <h3
+            class="text-xl font-semibold text-blue-400 mb-3 bg-[#0d1117] p-2 rounded-md inline-block"
+          >
+            שקף 5: הזדמנויות ו-3 מהלכי חדירה לשוק (Go-to-Market Plays)
+          </h3>
+
+          <div class="bg-[#0d1117] p-4 rounded-md mb-4">
+            <h4 class="text-lg font-semibold text-green-400 mb-2">
+              הזדמנות מרכזית
+            </h4>
+            <p class="text-[#8b949e]">
+              קיים "שטח לבן" עבור שחקן המגשר בין עולמות הקריאייטיב וה-Deep Tech.
+              אתה יכול להיות ה"מתרגם" שמבין גם את שפת מנהלי המותג וגם את שפת
+              מהנדסי התוכנה.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-[#0d1117] p-4 rounded-md">
+              <h4 class="text-lg font-semibold text-blue-400 mb-2">
+                מהלך #1: The "Agency's Secret Weapon" Play
+              </h4>
+              <div class="space-y-3 text-[#8b949e]">
+                <div>
+                  <h5 class="text-white mb-1">היגיון:</h5>
+                  <p>
+                    סוכנויות קריאייטיב מעולות באסטרטגיה ועיצוב, אך חסרות את
+                    היכולת הטכנית לממש חזונות אינטראקטיביים מורכבים. הן מאבדות
+                    פרויקטים או מספקות פתרונות פשוטים יותר.
+                  </p>
+                </div>
+                <div>
+                  <h5 class="text-white mb-1">המהלך:</h5>
+                  <p>
+                    למצב את עצמך כשותף White-Label עבור 3-5 סוכנויות מיתוג
+                    ופרסום מובילות. אתה הופך לכלי שלהן לנצח במכרזים ולספק ערך
+                    מוסף ללקוחות הפרימיום שלהן.
+                  </p>
+                </div>
+                <div>
+                  <h5 class="text-white mb-1">ביצוע:</h5>
+                  <p>
+                    פנייה יזומה למנהלי קריאייטיב (CDs) בלינקדאין עם דמו קצר
+                    ומרשים, והצעה למודל חלוקת רווחים פרויקטלי.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-[#0d1117] p-4 rounded-md">
+              <h4 class="text-lg font-semibold text-blue-400 mb-2">
+                מהלך #2: The "De-Risk the Deep Tech" Play
+              </h4>
+              <div class="space-y-3 text-[#8b949e]">
+                <div>
+                  <h5 class="text-white mb-1">היגיון:</h5>
+                  <p>
+                    סטארט-אפים טכנולוגיים מתקשים להסביר מוצר מורכב למשקיעים
+                    וללקוחות ראשונים. מצגת PowerPoint אינה מספיקה כדי לגייס
+                    מיליונים.
+                  </p>
+                </div>
+                <div>
+                  <h5 class="text-white mb-1">המהלך:</h5>
+                  <p>
+                    לפתח התמחות ב-"<strong class="text-green-400"
+                      >Product Demo as a Web Experience</strong
+                    >". אתה בונה הדגמה אינטראקטיבית מבוססת דפדפן המאפשרת למשתמש
+                    "לחוש" את הטכנולוגיה, ומפחיתה את הסיכון הנתפס עבור המשקיע.
+                  </p>
+                </div>
+                <div>
+                  <h5 class="text-white mb-1">ביצוע:</h5>
+                  <p>
+                    מעקב אחר חברות שגייסו Seed/Pre-seed, ופנייה למייסדים עם הצעה
+                    ממוקדת: "אני אבנה לכם את הדמו שיסגור לכם את סבב הגיוס הבא".
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-[#0d1117] p-4 rounded-md">
+              <h4 class="text-lg font-semibold text-blue-400 mb-2">
+                מהלך #3: The "Productized Entry-Point" Play
+              </h4>
+              <div class="space-y-3 text-[#8b949e]">
+                <div>
+                  <h5 class="text-white mb-1">היגיון:</h5>
+                  <p>
+                    פרויקטים גדולים דורשים תהליך מכירה ארוך ומורכב. לקוחות רבים
+                    רוצים "לטעום" מהיכולות שלך לפני שהם מתחייבים לפרויקט של שש
+                    ספרות.
+                  </p>
+                </div>
+                <div>
+                  <h5 class="text-white mb-1">המהלך:</h5>
+                  <p>
+                    לארוז רכיבים מההיצע שלך כשירותים "מוצריים" עם תכולה ומחיר
+                    קבועים, המשמשים כנקודת כניסה.
+                  </p>
+                </div>
+                <div>
+                  <h5 class="text-white mb-1">ביצוע:</h5>
+                  <ul class="list-disc list-inside space-y-1">
+                    <li>
+                      <strong class="text-white"
+                        >"Strategic Discovery Workshop":</strong
+                      >
+                      סדנת אפיון בתשלום של 4 שעות להגדרת הקונספט האינטראקטיבי
+                      (תמחור: ₪5,000).
+                    </li>
+                    <li>
+                      <strong class="text-white"
+                        >"Interactive Hero Section":</strong
+                      >
+                      שדרוג החלק העליון של אתר קיים עם אנימציית 3D/WebGL (תמחור:
+                      ₪15,000).
+                    </li>
+                    <li>
+                      שיווק החבילות הללו באופן ממוקד ללקוחות קיימים של סוכנויות
+                      ולמנהלי שיווק.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="canvas-card xl:col-span-1 lg:col-span-2">
+        <h2
+          class="text-2xl font-bold text-white mb-4 border-b-2 border-blue-500 pb-2"
+        >
+          1. ניתוח שוק: The Premium Niche
+        </h2>
+        <p class="text-[#8b949e] mb-6">
+          השוק אינו "בניית אתרים", אלא נישה בעלת ערך גבוה של פיתוח חוויות
+          דיגיטליות אינטראקטיביות (Immersive Web Experiences), המונעת מהצורך של
+          מותגים להתבדל בסביבה דיגיטלית רוויה.
+        </p>
+        <div class="space-y-4">
+          <div class="bg-[#010409] p-4 rounded-md">
+            <h3 class="text-lg font-semibold text-blue-400">
+              נהג מרכזי: בידול מותגי
+            </h3>
+            <p class="text-sm text-[#8b949e]">
+              הצורך לבלוט מעבר לאתרי תבנית סטנדרטיים.
+            </p>
+          </div>
+          <div class="bg-[#010409] p-4 rounded-md">
+            <h3 class="text-lg font-semibold text-blue-400">
+              נהג מרכזי: מעורבות משתמשים (Engagement)
+            </h3>
+            <p class="text-sm text-[#8b949e]">
+              הרצון להשאיר משתמשים וליצור חוויה זכירה.
+            </p>
+          </div>
+          <div class="bg-[#010409] p-4 rounded-md">
+            <h3 class="text-lg font-semibold text-blue-400">
+              נהג מרכזי: הדמיית מוצרים
+            </h3>
+            <p class="text-sm text-[#8b949e]">
+              הצורך להציג מוצרים מורכבים למשקיעים ולקוחות.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="canvas-card lg:col-span-1 xl:col-span-2">
+        <h2
+          class="text-2xl font-bold text-white mb-4 border-b-2 border-green-500 pb-2"
+        >
+          2. ניתוח SWOT: מיצוב א-סימטרי
+        </h2>
+        <p class="text-[#8b949e] mb-6">
+          ניתוח היתרונות והחסרונות הפנימיים מול ההזדמנויות והאיומים החיצוניים
+          חושף יתרון תחרותי מובהק המבוסס על סט כישורים נדיר.
+        </p>
+        <div class="swot-grid">
+          <div
+            class="swot-item bg-green-900 bg-opacity-30 border border-green-700"
+          >
+            <h3 class="text-xl font-bold text-green-400 mb-2">
+              חוזקות (Strengths)
+            </h3>
+            <ul class="list-disc list-inside text-sm text-[#c9d1d9]">
+              <li>סט כישורים ייחודי (3D, Audio, JS)</li>
+              <li>רקע יצירתי מובהק (מוזיקה, אירועים)</li>
+              <li>זריזות כפרילנסר</li>
+              <li>תיק עבודות מוכח (HandSynth)</li>
+            </ul>
+          </div>
+          <div
+            class="swot-item bg-yellow-900 bg-opacity-30 border border-yellow-700"
+          >
+            <h3 class="text-xl font-bold text-yellow-400 mb-2">
+              חולשות (Weaknesses)
+            </h3>
+            <ul class="list-disc list-inside text-sm text-[#c9d1d9]">
+              <li>תלות באדם אחד (SPOF)</li>
+              <li>מותג אישי בתהליך בנייה</li>
+              <li>מחסור בכישורים משלימים (שיווק, אסטרטגיה)</li>
+            </ul>
+          </div>
+          <div
+            class="swot-item bg-blue-900 bg-opacity-30 border border-blue-700"
+          >
+            <h3 class="text-xl font-bold text-blue-400 mb-2">
+              הזדמנויות (Opportunities)
+            </h3>
+            <ul class="list-disc list-inside text-sm text-[#c9d1d9]">
+              <li>ביקוש גובר לחוויות אימרסיביות</li>
+              <li>צמיחה בתחומי EdTech/Music-Tech</li>
+              <li>שותפויות אסטרטגיות עם סוכנויות</li>
+              <li>מיצוב כמוביל דעה בנישה</li>
+            </ul>
+          </div>
+          <div class="swot-item bg-red-900 bg-opacity-30 border border-red-700">
+            <h3 class="text-xl font-bold text-red-400 mb-2">
+              איומים (Threats)
+            </h3>
+            <ul class="list-disc list-inside text-sm text-[#c9d1d9]">
+              <li>תפיסת שוק ("גימיק" יקר)</li>
+              <li>תחרות עקיפה מסוכנויות בוטיק</li>
+              <li>רגישות תקציבי קריאייטיב להאטה</li>
+              <li>עליית כלי AI ו-No-Code</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="canvas-card lg:col-span-1 xl:col-span-2">
+        <h2
+          class="text-2xl font-bold text-white mb-4 border-b-2 border-purple-500 pb-2"
+        >
+          3. מפת התחרות: משחק באוקיינוס כחול
+        </h2>
+        <p class="text-[#8b949e] mb-6">
+          המיפוי מראה שאינך מתחרה ישירות ברוב השוק. המיצוב שלך נמצא בצומת ייחודי
+          בין מומחיות טכנית ליצירתיות, הרחק מהתחרות הרוויה של פרילנסרים
+          סטנדרטיים.
+        </p>
+        <div class="chart-container">
+          <canvas id="competitorChart"></canvas>
+        </div>
+      </section>
+
+      <section class="canvas-card xl:col-span-1 lg:col-span-2">
+        <h2
+          class="text-2xl font-bold text-white mb-4 border-b-2 border-red-500 pb-2"
+        >
+          4. חמשת הכוחות של פורטר: ניתוח אטרקטיביות
+        </h2>
+        <p class="text-[#8b949e] mb-6">
+          ניתוח הכוחות המבניים של השוק מראה כי הנישה של Creative Tech אטרקטיבית
+          מאוד עבור שחקן מומחה ומבודל, עם חסמי כניסה גבוהים ותחרות ישירה נמוכה.
+        </p>
+        <div class="chart-container h-80">
+          <canvas id="porterChart"></canvas>
+        </div>
+      </section>
+
+      <section class="canvas-card xl:col-span-3 lg:col-span-2">
+        <h2 class="text-3xl font-bold text-white mb-6 text-center">
+          5. תקציר אסטרטגי והמלצות לפעולה
+        </h2>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-400 mb-3">
+              תובנות מפתח (Key Insights)
+            </h3>
+            <ul class="space-y-3 list-disc list-inside text-[#c9d1d9]">
+              <li>
+                <strong class="font-semibold text-white"
+                  >הבידול שלך הוא הנכס:</strong
+                >
+                השילוב של קוד, סאונד ואינטראקציה הוא ליבת ההצעה.
+              </li>
+              <li>
+                <strong class="font-semibold text-white"
+                  >התחרות האמיתית:</strong
+                >
+                לא פרילנסרים אחרים, אלא תקציבי חדשנות בסוכנויות בוטיק.
+              </li>
+              <li>
+                <strong class="font-semibold text-white"
+                  >השוק צריך חינוך:</strong
+                >
+                עליך להסביר את הערך העסקי וה-ROI של חוויות אינטראקטיביות.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-green-400 mb-3">
+              המלצות אסטרטגיות (Recommendations)
+            </h3>
+            <ul class="space-y-3 list-disc list-inside text-[#c9d1d9]">
+              <li>
+                <strong class="font-semibold text-white">מיצוב מחדש:</strong>
+                שנה טייטל ל-"Creative Technologist" או "Interactive Experience
+                Developer".
+              </li>
+              <li>
+                <strong class="font-semibold text-white"
+                  >מיקוד קהלי יעד:</strong
+                >
+                סטארט-אפים (Deep Tech) וסוכנויות קריאייטיב (כ"נשק סודי").
+              </li>
+              <li>
+                <strong class="font-semibold text-white"
+                  >תמחור מבוסס ערך:</strong
+                >
+                הפסק לתמחר לפי שעה. הצע חבילות פרויקט ושלב "Discovery" בתשלום.
+              </li>
+              <li>
+                <strong class="font-semibold text-white"
+                  >שיווק כהוכחת יכולת:</strong
+                >
+                הפוך כל פרויקט ל-Case Study מפורט והרצה במיטאפים של UX/UI.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center mt-16 pt-6 border-t border-[#30363d]">
+      <p class="text-[#8b949e]">
+        ניתוח זה הוכן עבור שחר מעוז. התוכן מבוסס על מתודולוגיות ייעוץ אסטרטגי
+        מובילות.
+      </p>
+    </footer>
+
+    <script>
+      const tooltipTitleCallback = (tooltipItems) => {
+        const item = tooltipItems[0];
+        let label = item.chart.data.labels[item.dataIndex];
+        if (Array.isArray(label)) {
+          return label.join(" ");
+        }
+        return label;
+      };
+
+      const chartDefaultFont = { family: "'Assistant', sans-serif", size: 12 };
+      const chartDefaultColor = "#8b949e";
+      const gridColor = "rgba(255, 255, 255, 0.1)";
+
+      // Competitor Chart
+      const competitorCtx = document
+        .getElementById("competitorChart")
+        .getContext("2d");
+      new Chart(competitorCtx, {
+        type: "radar",
+        data: {
+          labels: [
+            "מומחיות טכנית",
+            "יצירתיות וחדשנות",
+            "גמישות וזריזות",
+            "מחיר נגיש",
+            "תמיכה הוליסטית",
+          ],
+          datasets: [
+            {
+              label: "שחר מעוז",
+              data: [9, 9, 8, 6, 5],
+              fill: true,
+              backgroundColor: "rgba(54, 162, 235, 0.2)",
+              borderColor: "rgb(54, 162, 235)",
+              pointBackgroundColor: "rgb(54, 162, 235)",
+              pointBorderColor: "#fff",
+              pointHoverBackgroundColor: "#fff",
+              pointHoverBorderColor: "rgb(54, 162, 235)",
+            },
+            {
+              label: "סוכנות קריאייטיב",
+              data: [7, 8, 4, 3, 9],
+              fill: true,
+              backgroundColor: "rgba(255, 99, 132, 0.2)",
+              borderColor: "rgb(255, 99, 132)",
+              pointBackgroundColor: "rgb(255, 99, 132)",
+              pointBorderColor: "#fff",
+              pointHoverBackgroundColor: "#fff",
+              pointHoverBorderColor: "rgb(255, 99, 132)",
+            },
+            {
+              label: "פרילנסר Full-Stack",
+              data: [6, 4, 7, 8, 6],
+              fill: true,
+              backgroundColor: "rgba(255, 205, 86, 0.2)",
+              borderColor: "rgb(255, 205, 86)",
+              pointBackgroundColor: "rgb(255, 205, 86)",
+              pointBorderColor: "#fff",
+              pointHoverBackgroundColor: "#fff",
+              pointHoverBorderColor: "rgb(255, 205, 86)",
+            },
+          ],
+        },
+        options: {
+          maintainAspectRatio: false,
+          responsive: true,
+          plugins: {
+            tooltip: { callbacks: { title: tooltipTitleCallback } },
+            legend: {
+              labels: { color: chartDefaultColor, font: chartDefaultFont },
+            },
+          },
+          scales: {
+            r: {
+              angleLines: { color: gridColor },
+              grid: { color: gridColor },
+              pointLabels: {
+                font: { ...chartDefaultFont, size: 14 },
+                color: "#c9d1d9",
+              },
+              ticks: {
+                color: chartDefaultColor,
+                backdropColor: "transparent",
+                font: chartDefaultFont,
+              },
+            },
+          },
+        },
+      });
+
+      // Porter's Five Forces Chart
+      const porterCtx = document.getElementById("porterChart").getContext("2d");
+      const wrapLabels = (label) => {
+        const words = label.split(" ");
+        if (words.length > 2) {
+          return [words.slice(0, 2).join(" "), words.slice(2).join(" ")];
+        }
+        return label;
+      };
+      new Chart(porterCtx, {
+        type: "bar",
+        data: {
+          labels: [
+            "איום כניסת מתחרים חדשים",
+            "כוח מיקוח לקוחות",
+            "כוח מיקוח ספקים",
+            "איום מוצרים תחליפיים",
+            "עצימות תחרות קיימת",
+          ].map(wrapLabels),
+          datasets: [
+            {
+              label: "עוצמת האיום (1=נמוך, 5=גבוה)",
+              data: [1, 3, 1, 4, 3],
+              backgroundColor: [
+                "#2e7d32",
+                "#f57c00",
+                "#2e7d32",
+                "#d32f2f",
+                "#f57c00",
+              ],
+              borderColor: "#161b22",
+              borderWidth: 2,
+              borderRadius: 4,
+            },
+          ],
+        },
+        options: {
+          maintainAspectRatio: false,
+          responsive: true,
+          indexAxis: "y",
+          plugins: {
+            legend: { display: false },
+            tooltip: { callbacks: { title: tooltipTitleCallback } },
+          },
+          scales: {
+            x: {
+              beginAtZero: true,
+              max: 5,
+              grid: { color: gridColor },
+              ticks: { color: chartDefaultColor, font: chartDefaultFont },
+            },
+            y: {
+              grid: { display: false },
+              ticks: { color: chartDefaultColor, font: chartDefaultFont },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -19,15 +19,33 @@
         th {
             font-weight: 600;
         }
-        /* Style for the Gantt chart timeline blocks */
-        .gantt-block {
-            background-color: #3b82f6; /* blue-500 */
-            color: #3b82f6;
-            font-size: 0.1px; /* Hide text but keep block dimensions */
+        .gantt-phase {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            text-align: center;
+            font-weight: 700;
+            background-color: #f3f4f6; /* gray-100 */
         }
+        .gantt-workstream {
+            font-weight: 600;
+            background-color: #f9fafb; /* gray-50 */
+        }
+        .gantt-bar-methodology { background-color: #6366f1; } /* indigo-500 */
+        .gantt-bar-product { background-color: #10b981; } /* emerald-500 */
+        .gantt-bar-outreach { background-color: #ef4444; } /* red-500 */
+
         .gantt-milestone {
+            position: relative;
+            background-color: transparent !important;
+            color: #a855f7; /* purple-500 */
             font-weight: bold;
             text-align: center;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        .value-prop {
+            background-color: #f0fdf4; /* green-50 */
+            border-right: 4px solid #22c55e; /* green-500 */
         }
         @media (max-width: 768px) {
             .canvas-grid, .swot-grid {
@@ -42,116 +60,108 @@
 
         <!-- Header -->
         <header class="text-center mb-10 pb-6 border-b">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">תוכנית אסטרטגית ועסקית</h1>
-            <p class="text-xl md:text-2xl text-gray-600 mt-2">שחר מעוז | מפתח פול סטאק וטכנולוג קריאייטיב</p>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">האסטרטגיה העסקית שלי</h1>
+            <p class="text-xl md:text-2xl text-gray-600 mt-2">שחר מעוז | פיתוח Full Stack בגישה של קומפוזיטור</p>
         </header>
 
         <!-- Navigation -->
         <nav class="bg-white rounded-lg shadow-sm p-4 mb-12 sticky top-4 z-10">
             <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2">
-                <li><a href="#goals" class="text-lg text-gray-700 hover:text-blue-600 font-semibold">תוכנית יעדים</a></li>
-                <li><a href="#gantt" class="text-lg text-gray-700 hover:text-blue-600 font-semibold">גאנט עסקי</a></li>
-                <li><a href="#swot" class="text-lg text-gray-700 hover:text-blue-600 font-semibold">ניתוח SWOT</a></li>
-                <li><a href="#canvas" class="text-lg text-gray-700 hover:text-blue-600 font-semibold">מודל עסקי Canvas</a></li>
+                <li><a href="#goals" class="text-lg text-gray-700 hover:text-green-600 font-semibold">המתודולוגיה והערך</a></li>
+                <li><a href="#gantt" class="text-lg text-gray-700 hover:text-green-600 font-semibold">תוכנית פעולה</a></li>
+                <li><a href="#swot" class="text-lg text-gray-700 hover:text-green-600 font-semibold">ניתוח SWOT</a></li>
+                <li><a href="#canvas" class="text-lg text-gray-700 hover:text-green-600 font-semibold">המודל העסקי</a></li>
             </ul>
         </nav>
 
         <!-- Section 1: Goals and Objectives -->
         <section id="goals" class="mb-16">
-            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-500">תוכנית יעדים ומטרות</h2>
-            <div class="overflow-x-auto bg-white rounded-lg shadow">
-                <table class="w-full">
-                    <thead class="bg-gray-100">
-                        <tr>
-                            <th class="p-4">המטרה</th>
-                            <th class="p-4">הסיבה (למה)</th>
-                            <th class="p-4">מדדי הצלחה</th>
-                            <th class="p-4">דרכי פעולה</th>
-                            <th class="p-4">תאריך יעד</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-200">
-                        <tr class="hover:bg-gray-50">
-                            <td class="p-4 font-semibold">השגת 2 לקוחות משלמים ראשונים</td>
-                            <td class="p-4">ייצור תזרים, צבירת ניסיון וקבלת המלצות (Testimonials).</td>
-                            <td class="p-4">חוזה חתום ותשלום מקדמה משני לקוחות שונים.</td>
-                            <td class="p-4">
-                                <ul class="list-disc list-inside space-y-1">
-                                    <li>אופטימיזציה של פרופיל לינקדאין.</li>
-                                    <li>יצירת רשימת 50 לקוחות פוטנציאליים.</li>
-                                    <li>שליחת 10 פניות אישיות בשבוע.</li>
-                                    <li>השתתפות ב-2 מיטאפים רלוונטיים בחודש.</li>
-                                </ul>
-                            </td>
-                            <td class="p-4">סוף רבעון 3</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="p-4 font-semibold">ביסוס נוכחות מקצועית ומומחיות ברשת</td>
-                            <td class="p-4">משיכת לקוחות באופן אורגני (Inbound) ובניית מוניטין.</td>
-                            <td class="p-4">500+ עוקבים בלינקדאין; 4 מאמרי מומחה/Case Studies; 100+ צפיות חודשיות בתיק העבודות.</td>
-                            <td class="p-4">
-                                <ul class="list-disc list-inside space-y-1">
-                                    <li>כתיבת Case Study מפורט עבור 3 פרויקטים.</li>
-                                    <li>פרסום פוסט מקצועי בלינקדאין פעמיים בשבוע.</li>
-                                    <li>אופטימיזציה של GitHub עם README ברור.</li>
-                                    <li>הקמת בלוג אישי.</li>
-                                </ul>
-                            </td>
-                            <td class="p-4">סוף רבעון 4</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="p-4 font-semibold">יצירת תשתית עסקית יציבה</td>
-                            <td class="p-4">ייעול תהליכים, מראה מקצועי וחיסכון בזמן אדמיניסטרציה.</td>
-                            <td class="p-4">תבנית הצעת מחיר; חוזה סטנדרטי; תהליך Onboarding כתוב; מערכת למעקב הכנסות/הוצאות.</td>
-                            <td class="p-4">
-                                <ul class="list-disc list-inside space-y-1">
-                                    <li>הגדרת חבילות שירות ומחירים.</li>
-                                    <li>הכנת תבניות למיילים, הצעות מחיר וחוזים.</li>
-                                    <li>פתיחת חשבון ייעודי לעסק.</li>
-                                    <li>בחירת כלי לניהול משימות ולקוחות.</li>
-                                </ul>
-                            </td>
-                            <td class="p-4">סוף רבעון 3</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-green-500">המתודולוגיה שלי: פיתוח כקומפוזיציה</h2>
+            <div class="bg-white p-6 rounded-lg shadow space-y-4">
+                <p class="text-lg leading-relaxed">אחרי שני עשורים של ניסיון בהלחנה, עיבוד והופעה, גיליתי שפיתוח מוצר דיגיטלי איכותי וחיבור קומפוזיציה מוזיקלית טובה נשענים על אותם עקרונות יסוד: מבנה, קצב, הרמוניה וסיפור. אני לא "עוד מפתח", אני מביא לשולחן מתודולוגיה ייחודית שמשתמשת בכלים מעולם המוזיקה כדי ליצור חוויות דיגיטליות מדויקות ומהדהדות יותר.</p>
+                <div class="p-4 rounded-lg value-prop">
+                    <h3 class="font-bold text-xl text-green-800">ההבטחה שלי ללקוח (ה-Value Proposition):</h3>
+                    <p class="text-lg text-green-900">אני בונה מוצרים דיגיטליים עם שלמות מבנית של יצירה מוזיקלית. התוצאה היא לא רק אתר פונקציונלי, אלא חווית משתמש שיש לה זרימה (Flow) נכונה, ממשק מאוזן (הרמוניה), ומהלך שמניע לפעולה (קצב). זהו הערך המוסף שאני מביא לכל פרויקט.</p>
+                </div>
             </div>
         </section>
 
         <!-- Section 2: Business Development Gantt -->
         <section id="gantt" class="mb-16">
-            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-500">גאנט לקידום העסק (רבעון קרוב)</h2>
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-green-500">תוכנית פעולה (6 חודשים)</h2>
             <div class="overflow-x-auto bg-white rounded-lg shadow">
-                <table class="w-full border-collapse">
-                    <thead class="bg-gray-100">
+                <table class="w-full border-collapse text-sm">
+                    <thead class="bg-gray-200">
                         <tr>
-                            <th class="p-3 border">תחום</th>
-                            <th class="p-3 border">משימה</th>
-                            <th class="p-2 border text-center" colspan="4">חודש 1</th>
-                            <th class="p-2 border text-center" colspan="4">חודש 2</th>
-                            <th class="p-2 border text-center" colspan="4">חודש 3</th>
-                        </tr>
-                        <tr>
-                            <th class="p-2 border"></th>
-                            <th class="p-2 border"></th>
-                            <th class="p-2 border text-xs">שבוע 1</th><th class="p-2 border text-xs">שבוע 2</th><th class="p-2 border text-xs">שבוע 3</th><th class="p-2 border text-xs">שבוע 4</th>
-                            <th class="p-2 border text-xs">שבוע 5</th><th class="p-2 border text-xs">שבוע 6</th><th class="p-2 border text-xs">שבוע 7</th><th class="p-2 border text-xs">שבוע 8</th>
-                            <th class="p-2 border text-xs">שבוע 9</th><th class="p-2 border text-xs">שבוע 10</th><th class="p-2 border text-xs">שבוע 11</th><th class="p-2 border text-xs">שבוע 12</th>
+                            <th class="p-2 border" colspan="2">תחום פעילות</th>
+                            <th class="p-2 border">משימה מרכזית</th>
+                            <th class="p-2 border">תוצר מדיד</th>
+                            <th class="p-1 border text-center" colspan="4">חודש 1</th>
+                            <th class="p-1 border text-center" colspan="4">חודש 2</th>
+                            <th class="p-1 border text-center" colspan="4">חודש 3</th>
+                            <th class="p-1 border text-center" colspan="4">חודש 4</th>
+                            <th class="p-1 border text-center" colspan="4">חודש 5</th>
+                            <th class="p-1 border text-center" colspan="4">חודש 6</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td colspan="14" class="p-2 font-bold bg-gray-50 border">תשתית עסקית</td></tr>
-                        <tr><td class="p-2 border"></td><td class="p-2 border">הגדרת חבילות ומחירים</td><td class="p-1 border gantt-block">.</td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td></tr>
-                        <tr><td class="p-2 border"></td><td class="p-2 border">הכנת תבניות (הצ"מ, חוזה)</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td></tr>
-                        <tr><td colspan="14" class="p-2 font-bold bg-gray-50 border">מיתוג ושיווק</td></tr>
-                        <tr><td class="p-2 border"></td><td class="p-2 border">אופטימיזציית פרופיל לינקדאין</td><td class="p-1 border gantt-block">.</td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td></tr>
-                        <tr><td class="p-2 border"></td><td class="p-2 border">כתיבת Case Study #1</td><td class="p-1 border"></td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td></tr>
-                        <tr><td class="p-2 border"></td><td class="p-2 border">כתיבת Case Study #2</td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td></tr>
-                        <tr><td class="p-2 border"></td><td class="p-2 border">פרסום פוסטים מקצועיים</td><td class="p-1 border"></td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td></tr>
-                        <tr><td colspan="14" class="p-2 font-bold bg-gray-50 border">מכירות ונטוורקינג</td></tr>
-                        <tr><td class="p-2 border"></td><td class="p-2 border">בניית רשימת לקוחות יעד</td><td class="p-1 border"></td><td class="p-1 border gantt-block">.</td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td></tr>
-                        <tr><td class="p-2 border"></td><td class="p-2 border">פניות יזומות ללקוחות</td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td><td class="p-1 border gantt-block">.</td></tr>
-                        <tr><td class="p-2 border"></td><td class="p-2 border">השתתפות במיטאפ/אירוע</td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border gantt-milestone">★</td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border gantt-milestone">★</td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border"></td><td class="p-1 border gantt-milestone">★</td></tr>
+                        <!-- Phase 1 -->
+                        <tr>
+                            <td rowspan="5" class="gantt-phase p-2 border">שלב 1: ביסוס המתודולוגיה</td>
+                            <td rowspan="2" class="gantt-workstream p-2 border">תשתית ושירותים</td>
+                            <td class="p-2 border">הגדרת שירותים מבוססי ערך</td>
+                            <td class="p-2 border">מסמך חבילות: "UX Composition", "Interactive Prototyping"</td>
+                            <td colspan="4" class="p-1 border gantt-bar-product"></td><td colspan="20" class="p-1 border"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-2 border">הכנת תבניות משפטיות</td>
+                            <td class="p-2 border">תבנית חוזה והצעת מחיר</td>
+                            <td colspan="2" class="p-1 border"></td><td colspan="2" class="p-1 border gantt-bar-product"></td><td colspan="20" class="p-1 border"></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" class="gantt-workstream p-2 border">שיווק ותוכן</td>
+                            <td class="p-2 border">כתיבת מאמר יסוד: "קוד כקומפוזיציה"</td>
+                            <td class="p-2 border">מאמר "אודות" בפורטפוליו המסביר את הגישה</td>
+                            <td colspan="2" class="p-1 border gantt-bar-methodology"></td><td colspan="22" class="p-1 border"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-2 border">הפקת Reel: "איך קצב משפר UX"</td>
+                            <td class="p-2 border">Reel המדגים את המתודולוגיה</td>
+                            <td colspan="3" class="p-1 border"></td><td colspan="3" class="p-1 border gantt-bar-methodology"></td><td colspan="18" class="p-1 border"></td>
+                        </tr>
+                         <tr>
+                            <td class="p-2 border">Case Study: HandSynth</td>
+                            <td class="p-2 border">קרוסלה/Reel המנתח את הפרויקט דרך משקפיים מוזיקליים</td>
+                            <td colspan="4" class="p-1 border"></td><td colspan="4" class="p-1 border gantt-bar-methodology"></td><td colspan="16" class="p-1 border"></td>
+                        </tr>
+                        <tr><td colspan="4" class="p-1 border text-center font-bold">אבן דרך</td><td colspan="8" class="p-1 border"></td><td colspan="1" class="gantt-milestone border">★</td><td colspan="15" class="p-1 border"></td></tr>
+
+                        <!-- Phase 2 -->
+                        <tr>
+                            <td rowspan="4" class="gantt-phase p-2 border">שלב 2: בניית סמכות</td>
+                            <td rowspan="2" class="gantt-workstream p-2 border">תוכן וקהילה</td>
+                            <td class="p-2 border">תוכן שבועי: "הרמוניה ב-UI"</td>
+                            <td class="p-2 border">Reel/פוסט המנתח עיצובים קיימים</td>
+                            <td colspan="8" class="p-1 border"></td><td colspan="16" class="p-1 border gantt-bar-methodology"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-2 border">תוכן שבועי: "מאחורי הקלעים"</td>
+                            <td class="p-2 border">הצגת תהליך פיתוח ויזואלי</td>
+                            <td colspan="8" class="p-1 border"></td><td colspan="16" class="p-1 border gantt-bar-methodology"></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="gantt-workstream p-2 border">פיתוח עסקי</td>
+                            <td class="p-2 border">איתור לקוחות שמעריכים יצירתיות</td>
+                            <td class="p-2 border">רשימת 30 מותגים/סטודיואים/עמותות</td>
+                            <td colspan="8" class="p-1 border"></td><td colspan="4" class="p-1 border gantt-bar-outreach"></td><td colspan="12" class="p-1 border"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-2 border">פנייה מבוססת ערך (לא סיפור)</td>
+                            <td class="p-2 border">5 פניות בשבוע המציעות "גישה אחרת ל-UX"</td>
+                            <td colspan="12" class="p-1 border"></td><td colspan="12" class="p-1 border gantt-bar-outreach"></td>
+                        </tr>
+                         <tr><td colspan="4" class="p-1 border text-center font-bold">אבן דרך</td><td colspan="16" class="p-1 border"></td><td colspan="1" class="gantt-milestone border">★</td><td colspan="7" class="p-1 border"></td></tr>
+
                     </tbody>
                 </table>
             </div>
@@ -159,42 +169,40 @@
 
         <!-- Section 3: SWOT Analysis -->
         <section id="swot" class="mb-16">
-            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-500">ניתוח SWOT</h2>
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-green-500">ניתוח SWOT: אסטרטגיה מבוססת מתודולוגיה</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 swot-grid">
                 <div class="bg-white rounded-lg shadow p-6">
                     <h3 class="text-2xl font-semibold text-green-600 mb-3">חוזקות (Strengths)</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li><b>שילוב יכולות ייחודי:</b> מפתח Full Stack וגם Creative Technologist (WebGL, Audio API, אינטראקטיב).</li>
-                        <li><b>גישת מוצר מקצה לקצה:</b> ניסיון בליווי פרויקט משלב הרעיון, דרך UX/UI, פיתוח והטמעה.</li>
-                        <li><b>התמחות בנישות עם ערך גבוה:</b> ניסיון מוכח ב-EdTech, חוויות דיגיטליות, נגישות ואוטומציה.</li>
-                        <li><b>תיק עבודות מרשים:</b> פרויקטים מגוונים ומוכחים המדגימים יכולת ביצוע.</li>
+                        <li><b>מתודולוגיה ייחודית ומוגנת:</b> "פיתוח כקומפוזיציה" הוא בידול שקשה להעתיק ומעורר סקרנות.</li>
+                        <li><b>ערך מוסף מובהק:</b> היכולת להסביר איך הגישה משפרת את חווית המשתמש והתוצר הסופי.</li>
+                        <li><b>רגישות אמנותית ככלי עבודה:</b> יכולת להבין ולתרגם צרכים של לקוחות יצירתיים.</li>
+                        <li><b>מומחיות מוכחת ב-Creative Tech:</b> תיק עבודות שתומך במתודולוגיה.</li>
                     </ul>
                 </div>
                 <div class="bg-white rounded-lg shadow p-6">
                     <h3 class="text-2xl font-semibold text-red-600 mb-3">חולשות (Weaknesses)</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li><b>עסק של אדם אחד:</b> קיבולת מוגבלת לקחת מספר פרויקטים גדולים במקביל.</li>
-                        <li><b>תלות במוניטין אישי:</b> העסק תלוי לחלוטין במיתוג ובשיווק של אדם אחד.</li>
-                        <li><b>חוסר ניסיון יחסי בניהול עסק:</b> דורש רכישת מיומנויות חדשות (שיווק, מכירות, הנה"ח).</li>
-                        <li><b>אתגר התמחור:</b> קושי בקביעת תמחור שישקף את הערך הגבוה והמומחיות הייחודית.</li>
+                        <li><b>דורש "חינוך שוק":</b> הצורך להסביר ללקוחות את הערך של הגישה החדשה.</li>
+                        <li><b>לא מתאים לכל לקוח:</b> ירתיע לקוחות שמחפשים פתרון "מהיר וזול" בלבד.</li>
+                        <li><b>אתגר תמחור פרימיום:</b> הצדקת תמחור גבוה יותר עבור הערך המוסף.</li>
                     </ul>
                 </div>
                 <div class="bg-white rounded-lg shadow p-6">
                     <h3 class="text-2xl font-semibold text-blue-600 mb-3">הזדמנויות (Opportunities)</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li><b>צמיחה בשוקי היעד:</b> דרישה גוברת לפתרונות EdTech ולחוויות למידה דיגיטליות ואינטראקטיביות.</li>
-                        <li><b>שותפויות אסטרטגיות:</b> שיתוף פעולה עם סטודיואים לעיצוב, מומחי UX, או סוכנויות שיווק.</li>
-                        <li><b>שיווק באמצעות תוכן:</b> מיצוב כמומחה על ידי כתיבת מאמרים והדגמות על WebGL, נגישות, אוטומציות וכו'.</li>
-                        <li><b>שוק כלכלת היוצרים (Creator Economy):</b> יוצרי תוכן רבים זקוקים לאוטומציות וכלים מותאמים אישית.</li>
+                        <li><b>מיצוב כמומחה נישה:</b> להפוך ל-Go-To Guy של פרויקטים המשלבים טכנולוגיה וחוויה.</li>
+                        <li><b>שיווק באמצעות תוכן מקצועי:</b> מאמרים ו-Reels על המתודולוגיה יבנו סמכות.</li>
+                        <li><b>שיתופי פעולה אסטרטגיים:</b> חיבור עם מומחי UX/UI שרוצים להעשיר את ארגז הכלים שלהם.</li>
+                        <li><b>הרצאות וסדנאות:</b> פוטנציאל להכנסה נוספת מהוראת המתודולוגיה.</li>
                     </ul>
                 </div>
                 <div class="bg-white rounded-lg shadow p-6">
                     <h3 class="text-2xl font-semibold text-yellow-600 mb-3">איומים (Threats)</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li><b>תחרות גבוהה:</b> שוק הפרילנס בפיתוח הינו רווי וכולל מתחרים רבים מהארץ ומהעולם.</li>
-                        <li><b>התפתחות כלי AI ו-No-Code:</b> פלטפורמות אלו עלולות להוזיל את עלות בניית אתרים פשוטים.</li>
-                        <li><b>מצב כלכלי:</b> בתקופות של האטה כלכלית, תקציבי פיתוח ופרויקטים מיוחדים עלולים להיפגע.</li>
-                        <li><b>תלות בטכנולוגיות משתנות:</b> צורך מתמיד בלמידה והתעדכנות בטכנולוגיות שמשתנות במהירות.</li>
+                        <li><b>קושי בתקשור הערך:</b> לקוחות עלולים לראות בגישה "גימיק" אם לא תוסבר כראוי.</li>
+                        <li><b>תחרות מול פתרונות תבניתיים:</b> הצורך להסביר למה פתרון מותאם אישית עדיף.</li>
+                        <li><b>תלות ביצירת תוכן:</b> האסטרטגיה דורשת יצירת תוכן עקבית כדי להישאר בתודעה.</li>
                     </ul>
                 </div>
             </div>
@@ -202,95 +210,93 @@
 
         <!-- Section 4: Business Model Canvas -->
         <section id="canvas" class="mb-16">
-            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-500">מודל עסקי Canvas</h2>
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-green-500">המודל העסקי: מבוסס מתודולוגיה</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 canvas-grid">
                 
                 <div class="bg-white rounded-lg shadow p-4 row-span-2">
                     <h3 class="font-bold text-lg mb-2">שותפים מרכזיים</h3>
                     <ul class="list-disc list-inside text-sm space-y-1">
-                        <li>סטודיואים לעיצוב ו-UX</li>
-                        <li>פרילנסרים משלימים (קופירייטרים, משווקים)</li>
-                        <li>חברות EdTech בשלבים מוקדמים</li>
-                        <li>מוסדות תרבות ואקדמיה</li>
+                        <li>מעצבי UX/UI ומוצר</li>
+                        <li>סטודיואים למיתוג ואסטרטגיה</li>
+                        <li>יועצים עסקיים ושיווקיים</li>
+                        <li>מוסדות אקדמיים וגופי הדרכה</li>
                     </ul>
                 </div>
 
                 <div class="bg-white rounded-lg shadow p-4">
                     <h3 class="font-bold text-lg mb-2">פעילויות מפתח</h3>
                     <ul class="list-disc list-inside text-sm space-y-1">
-                        <li>פיתוח Full Stack ו-Creative Tech</li>
-                        <li>ייעוץ ואפיון טכנולוגי ומוצרי</li>
-                        <li>בניית אוטומציות וכלים מותאמים</li>
-                        <li>שיווק, מכירות וניהול פרויקטים</li>
+                        <li><b>יישום מתודולוגיית "פיתוח כקומפוזיציה"</b></li>
+                        <li>תרגום אסטרטגיה עסקית לחוויה דיגיטלית</li>
+                        <li>פיתוח חוויות אינטראקטיביות</li>
+                        <li>שיווק תוכן מקצועי המדגים את הגישה</li>
                     </ul>
                 </div>
                 
                 <div class="bg-white rounded-lg shadow p-4 row-span-2 lg:col-span-1">
                     <h3 class="font-bold text-lg mb-2">הצעת ערך</h3>
-                    <p class="font-semibold text-blue-700 mb-2">"שותף טכנולוגי-יצירתי להפיכת רעיונות מורכבים לחוויות דיגיטליות ייחודיות ונגישות."</p>
+                    <p class="font-semibold text-green-700 mb-2">"מוצרים דיגיטליים עם שלמות מבנית וזרימה של יצירה מוזיקלית, המובילים לחווית משתמש אינטואיטיבית ומאוזנת."</p>
                     <ul class="list-disc list-inside text-sm space-y-1">
-                        <li>One-Stop-Shop: מרעיון למוצר עובד</li>
-                        <li>התמחות בנישות בעלות ערך גבוה</li>
-                        <li>פתרונות מותאמים אישית, לא תבניות</li>
+                        <li>תהליך עבודה מובנה וצפוי</li>
+                        <li>תוצר סופי שאינו רק "יפה" אלא "נכון"</li>
+                        <li>בידול מהותי מהמתחרים</li>
                     </ul>
                 </div>
 
                 <div class="bg-white rounded-lg shadow p-4">
                     <h3 class="font-bold text-lg mb-2">יחסי לקוחות</h3>
                     <ul class="list-disc list-inside text-sm space-y-1">
-                        <li>שותפות אישית ומעורבות גבוהה</li>
-                        <li>תהליך שקוף וקולבורטיבי</li>
-                        <li>תמיכה וייעוץ מתמשכים</li>
+                        <li>שותפות אסטרטגית מבוססת אמון</li>
+                        <li>תהליך עבודה שקוף ומשתף</li>
+                        <li>ייעוץ והכוונה ברמה גבוהה</li>
                     </ul>
                 </div>
                 
                 <div class="bg-white rounded-lg shadow p-4 row-span-2">
                     <h3 class="font-bold text-lg mb-2">פלחי לקוחות</h3>
                     <ul class="list-disc list-inside text-sm space-y-1">
-                        <li>סטארטאפים בתחום החינוך (EdTech)</li>
-                        <li>מוסדות תרבות ומוזיקאים</li>
-                        <li>עסקים הזקוקים לאינטראקטיביות מורכבת</li>
-                        <li>סוכנויות דיגיטל ועיצוב (כקבלן משנה)</li>
+                        <li>חברות וסטארטאפים בשלב ה-Scale-up</li>
+                        <li>מותגים המעוניינים בבידול דרך חוויה</li>
+                        <li>סוכנויות דיגיטל המחפשות יתרון תחרותי</li>
+                        <li>עסקים עם מוצרים מורכבים</li>
                     </ul>
                 </div>
                 
                 <div class="bg-white rounded-lg shadow p-4">
                     <h3 class="font-bold text-lg mb-2">משאבי מפתח</h3>
                      <ul class="list-disc list-inside text-sm space-y-1">
-                        <li>הידע והמומחיות האישיים</li>
-                        <li>תיק העבודות</li>
-                        <li>המוניטין והרשת המקצועית</li>
-                        <li>חומרה ותוכנות פיתוח</li>
+                        <li><b>המתודולוגיה הסדורה ("פיתוח כקומפוזיציה")</b></li>
+                        <li>ניסיון של 20 שנה בהבנת מבנים וקהל</li>
+                        <li>תיק העבודות היצירתי</li>
+                        <li>התוכן המקצועי (מאמרים, Reels)</li>
                     </ul>
                 </div>
 
                 <div class="bg-white rounded-lg shadow p-4">
                     <h3 class="font-bold text-lg mb-2">ערוצים</h3>
                     <ul class="list-disc list-inside text-sm space-y-1">
-                        <li>פרופיל לינקדאין</li>
-                        <li>אתר פורטפוליו אישי</li>
-                        <li>GitHub</li>
-                        <li>נטוורקינג ופה לאוזן</li>
+                        <li><b>תוכן מקצועי (בלוג, אינסטגרם)</b></li>
+                        <li>אתר פורטפוליו המציג את המתודולוגיה</li>
+                        <li>הרצאות במיטאפים וכנסים</li>
+                        <li>שותפויות אסטרטגיות</li>
                     </ul>
                 </div>
 
                 <div class="bg-white rounded-lg shadow p-4 lg:col-span-2">
                     <h3 class="font-bold text-lg mb-2">מבנה עלויות</h3>
                     <ul class="list-disc list-inside text-sm space-y-1 sm:flex sm:space-y-0 sm:space-x-6 sm:flex-wrap">
+                        <li>זמן המוקדש לפיתוח המתודולוגיה והתוכן</li>
                         <li>עלויות תפעול (תוכנות, ענן)</li>
-                        <li>עלויות שיווק (קידום, כלים)</li>
                         <li>הוצאות מקצועיות (רו"ח)</li>
-                        <li>זמן ללא חיוב (שיווק, למידה)</li>
                     </ul>
                 </div>
 
                 <div class="bg-white rounded-lg shadow p-4 lg:col-span-3">
                     <h3 class="font-bold text-lg mb-2">מקורות הכנסה</h3>
                     <ul class="list-disc list-inside text-sm space-y-1 sm:flex sm:space-y-0 sm:space-x-6 sm:flex-wrap">
-                        <li>תשלום פר פרויקט (Fixed Price)</li>
-                        <li>ריטיינר חודשי (תחזוקה ופיתוח מתמשך)</li>
-                        <li>בנק שעות (ייעוץ ומשימות קטנות)</li>
-                        <li class="text-gray-500">בעתיד: מכירת מוצרים דיגיטליים</li>
+                        <li>פרויקטי "UX Composition" (תמחור פרימיום)</li>
+                        <li>ריטיינר "Creative Technologist" לחברות</li>
+                        <li>סדנאות והרצאות על המתודולוגיה (בעתיד)</li>
                     </ul>
                 </div>
 
